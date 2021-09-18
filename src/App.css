@@ -6,3 +6,21 @@
 }
 
 
+#nav-bar {
+  background-color: rgb(161, 159, 159);
+  height: 50px;
+  width: 100%;
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+#footer {
+  background-color: rgb(114, 109, 109);
+  height: 50px;
+  text-align: center;
+  width: 100%;
+}
