@@ -15,7 +15,7 @@ function NavBar() {
                     <Link to="/Coin"> Crypto Price </Link>
                 </li>
                 <li>
-                    <Link to="/Calculator"> Contact </Link>
+                    <Link to="/Contact"> Contact </Link>
                 </li>
             </ul>
         </nav>
