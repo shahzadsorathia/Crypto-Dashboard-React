@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import './App.css';
-import App from './App';
+import  "./CSS/App.css"
+import App from './pages/App';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 
