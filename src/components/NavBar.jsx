@@ -12,10 +12,10 @@ function NavBar() {
                 </li>
                
                 <li>
-                    <Link to="/Weather"> Weather App </Link>
+                    <Link to="/Coin"> Crypto Price </Link>
                 </li>
                 <li>
-                    <Link to="/Calculator"> Calculator </Link>
+                    <Link to="/Calculator"> Contact </Link>
                 </li>
             </ul>
         </nav>
