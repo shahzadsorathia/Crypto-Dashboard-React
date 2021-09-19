@@ -1,17 +1,22 @@
 .coin-container{
-    border: solid 1px black;
-}
+    border: solid 1px red;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 9px 0px 0px 0px;
+  }
 
 .coin-row {
   display: flex;
   align-items: center;
-  height: 80px;
-  width: 850px;
+  height: 50px;
+  width: 990px;
 }
 
 .coin {
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .coin h1 {
@@ -23,6 +28,8 @@
   height: 30px;
   width: 30px;
   display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .coin-data {
