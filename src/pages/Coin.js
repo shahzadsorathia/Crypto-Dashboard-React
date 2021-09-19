@@ -4,20 +4,16 @@ import "../CSS/Coin.css"
 
 function Coinapi() {
   const [coins, setCoins] = useState([])
-  const [search, setSearch] = useState('')
+  const [search] = useState('')
 
   useEffect(() => {
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false ')
+    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=26&page=1&sparkline=false ')
       .then(res => {
         setCoins(res.data);
         console.log(res.data);
       })
       .catch(error => console.log(error));
   }, []);
-
-  const handleChange = e => {
-    setSearch(e.target.value)
-  }
 
   const filtercoins =
     coins.filter(
@@ -26,22 +22,10 @@ function Coinapi() {
 
   return (
     <div className="App">
-      <div className="search">
-        <h1 className="text"> Search </h1>
-        <form>
-          <input
-            type="text"
-            placeholder="Seach"
-            className="input"
-            onChange={handleChange}
-          />
-        </form>
-      </div>
-
       {filtercoins.map(coin => {
         return (
           <Coin
-            key={coin.id}
+            key={coin.i}
             name={coin.name}
             image={coin.image}
             Symbol={coin.symbol}
