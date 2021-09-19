@@ -4,16 +4,20 @@ import "../CSS/Coin.css"
 
 function Coinapi() {
   const [coins, setCoins] = useState([])
-  const [search] = useState('')
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=26&page=1&sparkline=false ')
+    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=15&page=1&sparkline=false ')
       .then(res => {
         setCoins(res.data);
         console.log(res.data);
       })
       .catch(error => console.log(error));
   }, []);
+
+  const handleChange = e => {
+    setSearch(e.target.value)
+  }
 
   const filtercoins =
     coins.filter(
@@ -22,13 +26,25 @@ function Coinapi() {
 
   return (
     <div className="App">
+      <div className="search">
+        <h1 className="text">  </h1>
+        <form>
+          <input
+            type="text"
+            placeholder="Seach"
+            className="input"
+            onChange={handleChange}
+          />
+        </form>
+      </div>
+
       {filtercoins.map(coin => {
         return (
           <Coin
-            key={coin.i}
+            key={coin.id}
             name={coin.name}
             image={coin.image}
-            Symbol={coin.symbol}
+            symbol={coin.symbol}
             marketcap={coin.market_cap}
             price={coin.current_price}
             priceChange={coin.price_change_percentage_24h}
@@ -42,13 +58,17 @@ function Coinapi() {
 
 function Coin({ name, image, symbol, price, volume, priceChange, marketcap }) {
   return (
-    <div className='coin-container'>
+   
+   <div className='coin-container'>
       <div className='coin-row'>
+       
         <div className='coin'>
+         
           <img src={image} alt='crypto' />
           <h1>{name}</h1>
           <p className='coin-symbol'>{symbol}</p>
         </div>
+       
         <div className='coin-data'>
           <p className='coin-price'>${price}</p>
           <p className='coin-volume'>${volume.toLocaleString()}</p>
@@ -65,5 +85,10 @@ function Coin({ name, image, symbol, price, volume, priceChange, marketcap }) {
     </div>
   );
 };
+
+
+
+
+
 
 export default Coinapi;
