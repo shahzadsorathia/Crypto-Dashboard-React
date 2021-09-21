@@ -25,16 +25,16 @@ function Coinapi() {
   }
   return (
     <div className="coin-searchbar">
-      <div>
+      <div className="coin-input">
       
-        <form className="search" >
+      
           <input
             type="text"
-            placeholder="Search"
-            className="coin-input"
+            placeholder="Search....."
+            className="search"
             onChange={handleChange}
           />
-        </form>
+       
       </div>
 
       {filtercoins.map(coin => {
