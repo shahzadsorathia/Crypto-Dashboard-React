@@ -253,9 +253,12 @@ label {
 
 .red {
   color: #f00606;
+  font-size: 25px;
   }
   .green {
   color: #11d811;
+  font-size: 25px;
+
   }
 
 .coin-container{
