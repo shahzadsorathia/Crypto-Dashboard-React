@@ -26,15 +26,12 @@ function Coinapi() {
   return (
     <div className="coin-searchbar">
       <div className="coin-input">
-      
-      
-          <input
-            type="text"
-            placeholder="Search....."
-            className="search"
-            onChange={handleChange}
-          />
-       
+        <input
+          type="text"
+          placeholder="Search....."
+          className="search"
+          onChange={handleChange}
+        />
       </div>
 
       {filtercoins.map(coin => {
@@ -60,7 +57,7 @@ function Coin(
 
   return (
     <div className='coin-container'>
-    
+
 
       <img className="coin-img" src={image} alt='crypto' />
       <h1 className="coin-name">{name}</h1>
