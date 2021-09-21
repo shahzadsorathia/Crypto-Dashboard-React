@@ -21,7 +21,7 @@ function Contact(props) {
     console.log(name, email, message)
     emailjs
       .sendForm(
-       
+
       )
       .then(
         (result) => {
@@ -127,16 +127,14 @@ function Contact(props) {
             <div className='row'>
               <div className='social'>
                 <ul>
-                <li>
-                    <a href = "https://github.com/shahzadsorathia" target="_blank">
-                   
+                  <li>
+                    <a href="https://github.com/shahzadsorathia" target="_blank">
                       <i className='fa fa-Github'></i>
                     </a>
                   </li>
-                 
+
                   <li>
-                    <a href = "https://www.linkedin.com/in/shahzadsorathia/" target="_blank">
-                   
+                    <a href="https://www.linkedin.com/in/shahzadsorathia/" target="_blank">
                       <i className='fa fa-LinkedIn'></i>
                     </a>
                   </li>
