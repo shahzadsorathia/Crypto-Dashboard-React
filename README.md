@@ -23,9 +23,7 @@ https://crypto-dashboard-react-shahzad.herokuapp.com/
 ## API Reference
 https://www.coingecko.com/en
   
-## Authors
 
-- [@Shahzad Sorathia](https://www.linkedin.com/in/shahzadsorathia/)
 
   
 ## Installation
@@ -36,4 +34,8 @@ Install my-project with npm
   npm install Crypto-Dashboard-React
   cd Crypto-Dashboard-React
 ```
+
+## Authors
+
+- [@Shahzad Sorathia](https://www.linkedin.com/in/shahzadsorathia/)
     
