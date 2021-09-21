@@ -56,13 +56,12 @@ function Coin(
   { name, image, symbol, price, volume, priceChange, marketcap }) {
 
   return (
+
     <div className='coin-container'>
-
-
       <img className="coin-img" src={image} alt='crypto' />
-      <h1 className="coin-name">{name}</h1>
+      <h1>{name}</h1>
       <h2>{symbol}</h2>
-      <h2>${price}</h2>
+      <h2>${price.toLocaleString()}</h2>
       <h2 >${volume.toLocaleString()}</h2>
       {priceChange < 0 ? (
         <p className='coin-percent red'>{priceChange.toFixed(2)}%</p>
