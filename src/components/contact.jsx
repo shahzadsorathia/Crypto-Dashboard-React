@@ -21,7 +21,7 @@ function Contact(props) {
     console.log(name, email, message)
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'user_7QBFC3xQDbDeAtxrVIMqp'
+       
       )
       .then(
         (result) => {
